@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
-    "start": "node server.js",
-    "build": "webpack"
+    "start": "node server.js"
   },
   "author": "Codecademy",
   "license": "ISC",
