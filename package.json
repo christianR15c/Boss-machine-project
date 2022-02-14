@@ -7,7 +7,7 @@
     "test": "cross-env PORT=8000 mocha --watch",
     "start-dev": "webpack -w & nodemon --watch server.js --watch server/",
     "start": "node server.js",
-    "postinstall": "webpack"
+    "build": "webpack"
   },
   "author": "Codecademy",
   "license": "ISC",
@@ -38,5 +38,6 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.5.5"
-  }
+  },
+  "heroku-run-build-script": true
 }
