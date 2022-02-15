@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 module.exports = app;
 
@@ -22,7 +23,7 @@ app.use('/api', apiRouter);
 
 // rendering home page
 app.get('/', function (req, res) {
-  res.render('index.html');
+  res.sendFile(path.join(__dirname + './index.html'));
 });
 
 // This conditional is here for testing purposes:
