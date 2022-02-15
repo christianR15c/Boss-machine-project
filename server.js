@@ -23,7 +23,7 @@ app.use('/api', apiRouter);
 // This conditional is here for testing purposes:
 if (!module.parent) {
   // Add your code to start the server listening at PORT below:
-  app.listen(process.env.PORT || 4001, () => {
+  app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
   });
 }
