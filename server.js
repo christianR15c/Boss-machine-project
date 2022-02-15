@@ -20,6 +20,11 @@ app.use(bodyParser.json());
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
+// rendering home page
+app.get('/', function (req, res) {
+  res.render('index.html');
+});
+
 // This conditional is here for testing purposes:
 if (!module.parent) {
   // Add your code to start the server listening at PORT below:
