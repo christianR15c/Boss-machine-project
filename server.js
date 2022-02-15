@@ -23,7 +23,7 @@ app.use('/api', apiRouter);
 
 // rendering home page
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + './index.html'));
+  res.sendFile('index.html', { root: __dirname });
 });
 
 // This conditional is here for testing purposes:
