@@ -16,17 +16,15 @@ app.use(cors());
 // Add middware for parsing request bodies here:
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
-app.use(express.urlencoded({ extended: true }));
 
 // Mount your existing apiRouter below at the '/api' path.
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
 // rendering home page
-app.get('/', (req, res) => {
-  res.render('index');
+app.get('/', function (req, res) {
+  res.sendFile('index.html', { root: __dirname });
 });
 
 // This conditional is here for testing purposes:
