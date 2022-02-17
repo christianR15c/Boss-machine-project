@@ -24,8 +24,8 @@ const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
 // rendering home page
-app.get('/', function (req, res) {
-  res.sendFile('index.html', { root: __dirname });
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
 // This conditional is here for testing purposes:
