@@ -16,6 +16,7 @@ app.use(cors());
 // Add middware for parsing request bodies here:
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
 // Mount your existing apiRouter below at the '/api' path.
