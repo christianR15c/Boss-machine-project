@@ -24,7 +24,7 @@ const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
 // rendering home page
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
   res.sendFile('index.html', { root: __dirname });
 });
 
